@@ -1,7 +1,7 @@
 # Swarmbots - Tasks
 
 
-The project aims to automate a decentralized swarm of autonomous mobile robots to carry out different tasks, with a focus on motion planning.
+The project aims to automate a decentralized swarm of fixed wing (vtol) to carry out different tasks, with a focus on motion planning.
 
 The system is completelly decentralized. Each robot only knows the approximate relative position of the robots within a speciific neighbourhood radius. The bots do not rely on inter-robot comminication, localization or memory, and possess only minimal local sensing & processing capabilities. They perform tasks collectively through 'swarm intelligence' algorithms.
 
@@ -12,8 +12,7 @@ Complex swarm applications are performed as a weighted combination of the follow
 - Exploration
 - Line formation
 - Shape Formation
-- Surrounding an item
-- Consensus
+
 
 **[ Version 1.0.0 ]**
 
@@ -81,42 +80,5 @@ Submodules and functions can be imported similar to standard python packages. Fo
 
 	import swarm_tasks.simulation
 	from swarm_tasks.utils import robot
-
-The following are steps to initialize a basic swarm simulation (eg: Circle formation with obstacle avoidance):
-
-```python
-import swarm_tasks
-
-from swarm_tasks.simulation import simulation as sim
-from swarm_tasks.simulation import visualizer as viz
-	
-#Import required modules
-import swarm_tasks.controllers.base_control as base_control
-from swarm_tasks.modules.formations import circle
-
-
-#Initialize Simulation and GUI 
-s = sim.Simulation(env_name='rectangles')
-gui = viz.Gui(s)
-gui.show_env()
-
-while(1):
-	for b in s.swarm:
-		#Basic behaviours
-		cmd = base_control.base_control(b)
-		cmd+= base_control.obstacle_avoidance(b)
-		
-		#Additional behaviours
-		cmd+=circle(b,5)
-		
-		#Execute
-		cmd.exec(b)
-		
-	gui.update()
-```	
-The ```test.py``` and ```test_tasks.py``` files can be used for easily testing and experimenting with the behaviours and tasks easily.
-
-## Authors:
-**Rishikesh Vanarse** ( [GitHub](https://github.com/rmvanarse), [Website](https://rmvanarse.github.io) ) 
 
 
