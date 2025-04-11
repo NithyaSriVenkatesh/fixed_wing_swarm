@@ -2,8 +2,6 @@
 
 # 🛩️ SwarmUAV: Decentralized Motion Planning for Fixed-Wing Drones
 
-> A modular SDK and simulation framework for group-based autonomous navigation using Artificial Potential Field (APF) methods.
-
 ## 🧠 Overview
 
 **SwarmUAV** implements a **decentralized swarm coordination system** for fixed-wing UAVs. It supports real-time decision-making based on local sensing and Artificial Potential Fields (APFs) to enable smooth navigation, obstacle avoidance, and group behaviors without central control.
