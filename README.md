@@ -36,7 +36,7 @@ This results in emergent group behavior without centralized control or global co
 
 Clone the repo and install the package locally:
 
-git clone https://https://github.com/NithyaSriVenkatesh/fixed_wing_swarm
+git clone https://github.com/NithyaSriVenkatesh/fixed_wing_swarm
 
 Install the package from the root directory as follows:
 
